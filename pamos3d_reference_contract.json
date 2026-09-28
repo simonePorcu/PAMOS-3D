@@ -1,0 +1,553 @@
+{
+  "contract": "PRCM",
+  "schemaVersion": "1.0.0",
+  "documentVersion": 1,
+  "createdAt": "2026-09-16T00:00:00Z",
+  "updatedAt": "2026-09-16T00:00:00Z",
+  "controlIntervalMs": 1000,
+  "scene": {
+    "sceneId": "pamos3d-reference-scene",
+    "coordinateSystem": "right-handed-y-up",
+    "baseUrls": [
+      "https://example.invalid/pamos3d-media/"
+    ]
+  },
+  "runtimeContext": {
+    "bandwidthMbps": 120,
+    "viewerPosition": [
+      0,
+      0,
+      0
+    ],
+    "viewingConditions": {
+      "headset": "meta-quest-3"
+    },
+    "deviceState": {
+      "profile": "meta-quest-3"
+    }
+  },
+  "objects": [
+    {
+      "objectId": "PC1",
+      "label": "Point Cloud 1",
+      "position": [
+        0,
+        0,
+        4.0
+      ],
+      "importance": 1,
+      "visibilityPolicy": {
+        "visible": true,
+        "deferAllowed": true,
+        "deferUtility": 0
+      },
+      "representations": [
+        {
+          "representationId": "pc1-gpcc_octree_q1",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 1,
+          "contentUri": "PC1/gpcc_octree_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 15307956,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-gpcc_octree_q2",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 2,
+          "contentUri": "PC1/gpcc_octree_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 34023142,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-gpcc_octree_q3",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 3,
+          "contentUri": "PC1/gpcc_octree_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 45927226,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-gpcc_trisoup_q1",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 1,
+          "contentUri": "PC1/gpcc_trisoup_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 49443382,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-gpcc_trisoup_q2",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 2,
+          "contentUri": "PC1/gpcc_trisoup_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 47682901,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-gpcc_trisoup_q3",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 3,
+          "contentUri": "PC1/gpcc_trisoup_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 55253458,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-vpcc_q1",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 1,
+          "contentUri": "PC1/vpcc_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 46302120,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-vpcc_q2",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 2,
+          "contentUri": "PC1/vpcc_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 47353003,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc1-vpcc_q3",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 3,
+          "contentUri": "PC1/vpcc_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 46334238,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        }
+      ],
+      "extensions": {
+        "sourceDataset": "D2AN subjective study (50 participants, Quest 3 / Vision Pro / Pico 4 Ultra)"
+      }
+    },
+    {
+      "objectId": "PC2",
+      "label": "Point Cloud 2",
+      "position": [
+        0,
+        0,
+        6.5
+      ],
+      "importance": 1,
+      "visibilityPolicy": {
+        "visible": true,
+        "deferAllowed": true,
+        "deferUtility": 0
+      },
+      "representations": [
+        {
+          "representationId": "pc2-gpcc_octree_q1",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 1,
+          "contentUri": "PC2/gpcc_octree_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 13376943,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-gpcc_octree_q2",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 2,
+          "contentUri": "PC2/gpcc_octree_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 25758441,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-gpcc_octree_q3",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 3,
+          "contentUri": "PC2/gpcc_octree_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 32423284,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-gpcc_trisoup_q1",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 1,
+          "contentUri": "PC2/gpcc_trisoup_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 41533165,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-gpcc_trisoup_q2",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 2,
+          "contentUri": "PC2/gpcc_trisoup_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 40478059,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-gpcc_trisoup_q3",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 3,
+          "contentUri": "PC2/gpcc_trisoup_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 38844991,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-vpcc_q1",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 1,
+          "contentUri": "PC2/vpcc_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 40154408,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-vpcc_q2",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 2,
+          "contentUri": "PC2/vpcc_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 40214395,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc2-vpcc_q3",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 3,
+          "contentUri": "PC2/vpcc_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 40766780,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        }
+      ],
+      "extensions": {
+        "sourceDataset": "D2AN subjective study (50 participants, Quest 3 / Vision Pro / Pico 4 Ultra)"
+      }
+    },
+    {
+      "objectId": "PC3",
+      "label": "Point Cloud 3",
+      "position": [
+        0,
+        0,
+        10.5
+      ],
+      "importance": 1,
+      "visibilityPolicy": {
+        "visible": true,
+        "deferAllowed": true,
+        "deferUtility": 0
+      },
+      "representations": [
+        {
+          "representationId": "pc3-gpcc_octree_q1",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 1,
+          "contentUri": "PC3/gpcc_octree_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 10907199,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-gpcc_octree_q2",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 2,
+          "contentUri": "PC3/gpcc_octree_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 20542446,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-gpcc_octree_q3",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Octree",
+          "qualitySetting": 3,
+          "contentUri": "PC3/gpcc_octree_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 25585155,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-gpcc_trisoup_q1",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 1,
+          "contentUri": "PC3/gpcc_trisoup_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 30501856,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-gpcc_trisoup_q2",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 2,
+          "contentUri": "PC3/gpcc_trisoup_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 47607814,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-gpcc_trisoup_q3",
+          "format": "point-cloud",
+          "encodingMethod": "G-PCC-Trisoup",
+          "qualitySetting": 3,
+          "contentUri": "PC3/gpcc_trisoup_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 43066873,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-vpcc_q1",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 1,
+          "contentUri": "PC3/vpcc_q1/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 31314264,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-vpcc_q2",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 2,
+          "contentUri": "PC3/vpcc_q2/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 32705070,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        },
+        {
+          "representationId": "pc3-vpcc_q3",
+          "format": "point-cloud",
+          "encodingMethod": "V-PCC",
+          "qualitySetting": 3,
+          "contentUri": "PC3/vpcc_q3/",
+          "dependencies": [],
+          "resourceProfile": {
+            "bitrateBps": 33760100,
+            "decodingTimeMs": null,
+            "renderingCostMs": null,
+            "memoryMB": null,
+            "energyJ": null,
+            "switchingCostMs": 0
+          },
+          "extensions": {}
+        }
+      ],
+      "extensions": {
+        "sourceDataset": "D2AN subjective study (50 participants, Quest 3 / Vision Pro / Pico 4 Ultra)"
+      }
+    }
+  ],
+  "extensions": {
+    "note": "This manifest packages the same 3 calibrated point clouds (9 representations each) used by the built-in dataset in this demo, expressed as a PRCM (Perceptual Representation Contract Manifest) following the PAMOS-3D paper's Table 1 structure."
+  }
+}
