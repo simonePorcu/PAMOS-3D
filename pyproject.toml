@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pamos3d"
+version = "0.1.0"
+description = "Decision-engine library for the PAMOS-3D streaming framework (PRCM + D2AN + joint scene allocator)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "Simone Porcu", email = "simone.porcu@unica.it"},
+]
+dependencies = [
+    "numpy>=1.22",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["pamos3d*"]
+
+[tool.setuptools.package-data]
+pamos3d = ["*.json"]
