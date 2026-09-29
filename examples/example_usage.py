@@ -45,6 +45,36 @@ def main():
     print("call 3 (bandwidth cut to 60 Mbps): new document_version =", moved.document_version,
           " scene_mos =", round(d2.scene_mos, 3))
 
+    # --- delivery demo: build a small contract from real files, then
+    #     retrieve the bytes D2AN selected. The reference contract above
+    #     uses placeholder content_uri values, so this part uses its own
+    #     tiny, self-contained scene instead. ---
+    print("\n--- delivery demo ---")
+    import tempfile
+    from pamos3d.adapters.pointcloud import scan_object_directory, build_contract
+    from pamos3d.delivery import deliver_scene
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        obj_dir = tmp / "PC1"
+        obj_dir.mkdir()
+        (obj_dir / "vpcc_q1.bin").write_bytes(b"\x00" * 500_000)
+        (obj_dir / "vpcc_q2.bin").write_bytes(b"\x00" * 1_500_000)
+        (obj_dir / "vpcc_q3.bin").write_bytes(b"\x00" * 3_000_000)
+
+        pc1 = scan_object_directory(obj_dir, object_id="PC1", position=(0, 0, 4.0), fps=1.0)
+        small_contract = build_contract([pc1], bandwidth_mbps=30.0, scene_id="delivery-demo")
+
+        small_decision = engine.decide(small_contract)
+        report = deliver_scene(small_decision, small_contract, destination_dir=tmp / "received")
+
+        print(f"delivered {len(report.objects)} object(s), {report.total_bytes} bytes, "
+              f"{report.total_time_s:.4f}s")
+        for object_id, delivered in report.objects.items():
+            print(f"  {object_id}: {delivered.destination_path.name} "
+                  f"({delivered.bytes_transferred} bytes, size_matches_expected="
+                  f"{delivered.size_matches_expected})")
+
 
 if __name__ == "__main__":
     main()

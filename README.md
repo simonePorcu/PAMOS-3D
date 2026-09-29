@@ -81,6 +81,24 @@ Only the point-cloud adapter is implemented today; a Gaussian Splat or
 mesh adapter would live at `pamos3d.adapters.<format>` with the same
 kind of functions, feeding a D2AN instance retrained for that format.
 
+## Delivering the selected scene
+
+`pamos3d.delivery` retrieves the bytes of the representations D2AN
+selected. It resolves each `content_uri` (a local path, or an
+`http(s)://` URL) and copies/fetches the file to a destination folder.
+It does not decode or render anything: that is the job of the
+application consuming the delivered files on its target device.
+
+```python
+from pamos3d.delivery import deliver_scene
+
+decision = engine.decide(contract)
+report = deliver_scene(decision, contract, destination_dir="received/")
+print(report.total_bytes, report.total_time_s)
+for object_id, delivered in report.objects.items():
+    print(object_id, delivered.destination_path)
+```
+
 ## Package layout
 
 | Module              | Responsibility |
@@ -90,6 +108,7 @@ kind of functions, feeding a D2AN instance retrained for that format.
 | `pamos3d.allocator`  | `allocate()`: D2AN / Max-bitrate / Greedy / Uniform / Hybrid strategies |
 | `pamos3d.engine`     | `PAMOS3DEngine`: the version-aware control loop |
 | `pamos3d.adapters.pointcloud` | Builds `Representation`/`SceneObject`/`Contract` from real compressed point-cloud files |
+| `pamos3d.delivery` | Retrieves the bytes of the selected representations (local file or HTTP) to a destination folder |
 
 ## Tests
 
@@ -98,9 +117,9 @@ pip install -e ".[dev]"
 pytest tests/
 ```
 
-11 tests cover contract validation, all five allocation strategies, the
-version-aware caching logic, and the full file-to-decision adapter
-pipeline. Only the point-cloud instance (V-PCC, G-PCC Octree, G-PCC
-Trisoup) is currently trained and bundled; other formats need their own
-adapter and a retrained D2AN bundle, with no change to `Contract`,
-`allocator`, or `engine`.
+16 tests cover contract validation, all five allocation strategies, the
+version-aware caching logic, the file-to-decision adapter pipeline, and
+scene delivery over both local files and HTTP. Only the point-cloud
+instance (V-PCC, G-PCC Octree, G-PCC Trisoup) is currently trained and
+bundled; other formats need their own adapter and a retrained D2AN
+bundle, with no change to `Contract`, `allocator`, or `engine`.

@@ -28,6 +28,7 @@ from .contract import (
 from .model import D2AN, ModelError
 from .allocator import SceneDecision, AllocationError, allocate, STRATEGIES
 from .engine import PAMOS3DEngine
+from .delivery import DeliveryReport, DeliveredObject, DeliveryError, deliver_scene, deliver_object
 
 __version__ = "0.1.0"
 __author__ = "Simone Porcu"
@@ -47,4 +48,9 @@ __all__ = [
     "allocate",
     "STRATEGIES",
     "PAMOS3DEngine",
+    "DeliveryReport",
+    "DeliveredObject",
+    "DeliveryError",
+    "deliver_scene",
+    "deliver_object",
 ]
